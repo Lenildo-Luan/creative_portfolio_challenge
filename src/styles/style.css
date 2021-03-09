@@ -1,0 +1,71 @@
+#outer-dropzone {
+    width: 50vw;
+}
+
+.dropzone {
+    background-color: #bfe4ff;
+    border: dashed 4px transparent;
+    border-radius: 4px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.drop-active {
+    border-color: #aaa;
+}
+
+.drop-target {
+    background-color: #29e;
+    border-color: #fff;
+    border-style: solid;
+}
+
+.drag-drop {
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    color: #fff;
+    touch-action: none;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+    margin-bottom: 5vh;
+}
+
+.drag-drop.can-drop {
+    color: #000;
+    background-color: #4e4;
+}
+
+.planet1 {
+    background-color: #29e;
+}
+
+.planet2 {
+    background-color: #fe6e00;
+}
+
+
+/* asdasdasd */
+
+body {
+    display: flex;
+}
+
+#universe {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

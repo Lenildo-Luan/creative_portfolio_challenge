@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <audio id="sound1">
+		<source src="./assets/music1.mp3" type="audio/mpeg"></source>
+		Your browser isn't invited for super fun audio time.
+	</audio>
+
+    <audio id="sound2">
+		<source src="./assets/music2.wav"></source>
+		Your browser isn't invited for super fun audio time.
+	</audio>
+
+    <section id="universe">
+        <div id="particles-js"></div>
+        <div id="yes-drop" class="drag-drop planet1" onmouseenter="audio1.play(0)" onmouseout="audio1.stop(0)"></div>
+        <div id="yes-drop" class="drag-drop planet2" onmouseenter="audio1.play(1)" onmouseout="audio1.stop(1)"></div>
+    </section>
+
+    <!-- <section id="outer-dropzone" class="dropzone">
+    </section> -->
+
+    <script src="./libraries/particles.mim.js"></script>
+    <script src="./script.js" type="module">
+    </script>
+</body>
+
+
+</html>
