@@ -1,26 +1,45 @@
-#outer-dropzone {
-    width: 50vw;
+/* Global  */
+
+* {
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
 }
 
-.dropzone {
-    background-color: #bfe4ff;
-    border: dashed 4px transparent;
-    border-radius: 4px;
-    padding: 10px;
-    transition: background-color 0.3s;
+body {
+    display: flex;
 }
 
-.drop-active {
-    border-color: #aaa;
+#universe {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.drop-target {
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Planets */
+
+.planet1 {
     background-color: #29e;
-    border-color: #fff;
-    border-style: solid;
+}
+
+.planet2 {
+    background-color: #4e4;
 }
 
 .drag-drop {
+    z-index: 2;
     display: inline-block;
     height: 75px;
     width: 75px;
@@ -38,34 +57,224 @@
     background-color: #4e4;
 }
 
-.planet1 {
-    background-color: #29e;
+
+/* BlackHole */
+
+#blackHole {
+    position: absolute;
+    top: 30.5%;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
 }
 
-.planet2 {
-    background-color: #fe6e00;
+.dropzone {
+    border-radius: 50%;
+    background: #000;
+    border: 3px solid #101016;
+    transition: 0.2s;
 }
 
-
-/* asdasdasd */
-
-body {
-    display: flex;
+.drop-active {
+    border-color: #303040;
 }
 
-#universe {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+.drop-target {
+    border-color: #606070;
+    transform: scale(1.1, 1.1);
+}
+
+.fullBlackHole {
+    /* top: 0 !important;
+    right: 0 !important;
+    height: 100% !important;
+    width: 100% !important; */
+    transform: scale(15, 15);
+    border: 0;
+    /* border-radius: 0; */
     background-color: #000;
+    z-index: 3 !important;
+}
+
+
+/* Projects */
+
+#project1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: #fff;
+    z-index: 4;
+}
+
+.dontShowProject {
+    display: none;
+}
+
+.showProject {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#particles-js {
+.closeProject {
+    transform: scaleX(-1);
+    color: #fff;
+    cursor: pointer;
+    height: 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
+    height: 350px;
+}
+
+.paragraph {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 81px;
+    font-weight: 700;
+    position: relative;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 100;
+    text-align: justify;
+    width: 280px;
+    line-height: 22px;
+    position: relative;
+}
+
+.container .title {
+    animation: titleAnim 0.3s;
+}
+
+.container .subtitle {
+    animation: subtitleAnim 0.5s;
+}
+
+.container .text {
+    animation: textAnim 0.7s;
+}
+
+@keyframes titleAnim {
+    from {
+        top: 10px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes titleAnim {
+    from {
+        top: 10px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes subtitleAnim {
+    from {
+        top: 10px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes textAnim {
+    from {
+        top: 10px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.projectImage {
+    width: 325px;
+    height: 465px;
+    margin-right: 75px;
+    border-radius: 5px;
+    position: relative;
+    animation: imageAnim 0.5s;
+}
+
+@keyframes imageAnim {
+    from {
+        left: 10px;
+        opacity: 0;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+
+/* SUM */
+
+#sum {
     position: absolute;
+    bottom: -150%;
+    width: 81vw;
+    height: 81vw;
+    border-radius: 50%;
+    background-color: #fe6e00;
+    transition: 0.3s;
+}
+
+#sum:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+#sum:hover>.aboutTitle {
+    opacity: 1;
+}
+
+.aboutTitle {
+    position: absolute;
+    left: 40%;
+    top: 2.5%;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+#about {
     width: 100%;
     height: 100%;
+    position: absolute;
+    color: #fff;
+    z-index: 4;
+}
+
+.fullSum {
+    cursor: inherit !important;
+    transform: scale(2.5, 2.5) !important;
+    z-index: 3 !important;
 }

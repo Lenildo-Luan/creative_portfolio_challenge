@@ -25,7 +25,11 @@ interact('.dropzone').dropzone({
         event.relatedTarget.classList.remove('can-drop')
         audio1.isInProjectArea = 0;
     },
-    ondrop: function(event) {},
+    ondrop: function(event) {
+        event.target.classList.add('fullBlackHole');
+        setTimeout(() => { window.document.getElementById('project1').classList.add('showProject'); }, 200);
+
+    },
     ondropdeactivate: function(event) {
         // remove active dropzone feedback
         event.target.classList.remove('drop-active')
@@ -57,6 +61,7 @@ function dragMoveListener(event) {
     target.setAttribute('data-y', y)
 }
 
+
 var audio1 = {
     isDragged: 0,
     isInProjectArea: 0,
@@ -84,3 +89,15 @@ particlesJS.load('particles-js', 'particles.json', function() {
 audio1.setCurrentTime(2, 0);
 
 window.audio1 = audio1;
+window.closeProject = () => {
+    window.document.getElementById('blackHole').classList.remove('fullBlackHole')
+    window.document.getElementById('project1').classList.remove('showProject');
+}
+window.openAbout = () => {
+    window.document.getElementById('sum').classList.add('fullSum');
+    setTimeout(() => { window.document.getElementById('about').classList.add('showProject'); }, 200);
+}
+window.closeAbout = () => {
+    window.document.getElementById('sum').classList.remove('fullSum')
+    window.document.getElementById('about').classList.remove('showProject');
+}

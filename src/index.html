@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preload" as="font" href="./assets/fonts/Barlow-Thin.woff" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./assets/fonts/Barlow-Regular.woff" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./assets/fonts/Barlow-Bold.woff" type="font/woff" crossorigin="anonymous">
 </head>
 
 <body>
@@ -19,11 +22,53 @@
 		Your browser isn't invited for super fun audio time.
 	</audio>
 
-    <section id="universe">
+    <main id="universe">
         <div id="particles-js"></div>
+        <div id="blackHole" class="dropzone"></div>
+
         <div id="yes-drop" class="drag-drop planet1" onmouseenter="audio1.play(0)" onmouseout="audio1.stop(0)"></div>
         <div id="yes-drop" class="drag-drop planet2" onmouseenter="audio1.play(1)" onmouseout="audio1.stop(1)"></div>
-    </section>
+
+        <div id="sum" onclick="openAbout()">
+            <p class="aboutTitle title">Sobre</p>
+        </div>
+
+        <section id="project1" class="dontShowProject">
+            <img src="./assets/images/image1.png" alt="" class="projectImage">
+            <div class="container">
+                <span onclick="closeProject()">
+                    <img src="./assets/arrow.svg" class="closeProject" alt="">
+                </span>
+
+                <p class="title">Robótica</p>
+                <p class="subtitle">Um texto bem rápido sobre robótica aqui</p>
+                <div class="paragraph">
+                    <p class="text">Just let this happen. We just let this flow right out of our minds. Just relax and let it flow. That easy. Let's put some happy little clouds in our world. It's a very cold picture, I may have to go get my coat. It’s about to freeze
+                        me to death. This is gonna be a happy little seascape. Let's go up in </p>
+                    <p class="text">here, and start having some fun The least little bit can do so much. Work on one thing at a time. Don't get carried away - we have plenty of time. Put your feelings into it, your heart, it's your world. These trees are so much fun.
+                        I get started on them and I have a hard time stopping.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="dontShowProject">
+            <img src="./assets/images/image1.png" alt="" class="projectImage">
+            <div class="container">
+                <span onclick="closeAbout()">
+                    <img src="./assets/arrow.svg" class="closeProject" alt="">
+                </span>
+
+                <p class="title">Robótica</p>
+                <p class="subtitle">Um texto bem rápido sobre robótica aqui</p>
+                <div class="paragraph">
+                    <p class="text">Just let this happen. We just let this flow right out of our minds. Just relax and let it flow. That easy. Let's put some happy little clouds in our world. It's a very cold picture, I may have to go get my coat. It’s about to freeze
+                        me to death. This is gonna be a happy little seascape. Let's go up in </p>
+                    <p class="text">here, and start having some fun The least little bit can do so much. Work on one thing at a time. Don't get carried away - we have plenty of time. Put your feelings into it, your heart, it's your world. These trees are so much fun.
+                        I get started on them and I have a hard time stopping.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- <section id="outer-dropzone" class="dropzone">
     </section> -->
