@@ -71,7 +71,7 @@ function dragMoveListener(event) {
 
 var projects = {
     planet1: {
-        img: './assets/images/becoDaEletronica.png',
+        img: './assets/images/BecoDaEletronica.webp',
         title: 'O beco',
         subtitle: 'Não o diagonal, mas sim o da eletrônica',
         text1: 'Desde o ensino médio técnico, comprar componentes eletrônicos era complicado. Tinhamos que nos deslocar até o centro da cidade, onde tinham lojas com esses produtos, na esperança de encontra-los. Mesmo assim, as opções eram bem limitadas, nos restando duas opções. Comprar caro aqui pelo Brasil, ou',
@@ -80,7 +80,7 @@ var projects = {
         linkImg: './assets/images/instagram_white.svg'
     },
     planet2: {
-        img: './assets/images/RAS.png',
+        img: './assets/images/RAS.webp',
         title: 'RAS',
         subtitle: 'Sociedade e Robótica e Automação do IEEE (RAS)',
         text1: 'O Instituto de Engenheiros Elétricos e Eletricistas (IEEE) é uma instituição a nível global. Porém, se existir um grupo de estudantes engajados dentro de alguma universdade, estes podem abrir uma ramificação dessa instituição nela. A RAS é um capítulo dessa instituição, voltada a robótica e automação.',
@@ -89,7 +89,7 @@ var projects = {
         linkImg: './assets/images/instagram_white.svg'
     },
     planet3: {
-        img: './assets/images/JornadaWeb.png',
+        img: './assets/images/JornadaWeb.webp',
         title: 'Jornada Web',
         subtitle: 'Compartilhar conhecimento é preciso',
         text1: 'Acredito que conhecimento é algo que deve ser compartilhado com o máximo de pessoas possível. Compartilhar conhecimento é algo vital para crescermos enquanto sociedade. Além disso, quando eu ensino, sinto que aprendo duas vezes. Com esse pensamento eu iniciei um projeto pessoal',
@@ -98,7 +98,7 @@ var projects = {
         linkImg: './assets/images/instagram_white.svg'
     },
     planet4: {
-        img: './assets/images/Bravadus.png',
+        img: './assets/images/Bravadus.webp',
         title: 'Bravadus',
         subtitle: 'Nós adoramos desafios',
         text1: 'Sou fascinado por tudo que envolve computação, desde a hardware a desenvolvimento de software. Aprender a criar projetos com minhas próprias mãos me dá a impressão de que posso moldar a realidade da forma como desejo. Porém, esse poder pode conter cosnsigo algumas responsabilidades no mundo.',
@@ -107,7 +107,7 @@ var projects = {
         linkImg: './assets/images/instagram_white.svg'
     },
     planet5: {
-        img: './assets/images/Optlife.png',
+        img: './assets/images/Optlife.webp',
         title: 'Optlife',
         subtitle: 'Quer saber qual a rotina da sua melhor versão?',
         text1: 'Já teve a sensação de que não teve tempo? De que administrar seu tempo tem se tornado algo cansativo? Não consegue separar hora de trabalho da hora para sua vida pessoal? Se sim, eu também, e estou cansado disso. Por isso, tenho feito desse problema foco da minha pesquisa em um laboratório ',
@@ -152,28 +152,38 @@ audioLibrarie.universe.play();
 
 let planet1Audio = document.getElementById("planet1");
 planet1Audio.addEventListener('mouseenter', () => {
-    audioLibrarie.planet1.play();
+    if (audio1.isDragged == 0)
+        audioLibrarie.planet1.play();
 })
 
 let planet2Audio = document.getElementById("planet2");
 planet2Audio.addEventListener('mouseenter', () => {
-    audioLibrarie.planet2.play();
+    if (audio1.isDragged == 0)
+        audioLibrarie.planet2.play();
 })
 
 let planet3Audio = document.getElementById("planet3");
 planet3Audio.addEventListener('mouseenter', () => {
-    audioLibrarie.planet3.play();
+    if (audio1.isDragged == 0)
+        audioLibrarie.planet3.play();
 })
 
 let planet4Audio = document.getElementById("planet4");
 planet4Audio.addEventListener('mouseenter', () => {
-    audioLibrarie.planet4.play();
+    if (audio1.isDragged == 0)
+        audioLibrarie.planet4.play();
 })
 
 let planet5Audio = document.getElementById("planet5");
 planet5Audio.addEventListener('mouseenter', () => {
-    audioLibrarie.planet5.play();
+    if (audio1.isDragged == 0)
+        audioLibrarie.planet5.play();
 })
+
+setTimeout(() => {
+    window.document.getElementById('loading').classList.remove('showProject');
+    window.document.getElementById('sum').classList.remove('fullSum')
+}, 1000)
 
 // ===========================================================================
 
@@ -183,7 +193,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 window.audio1 = audio1;
 window.closeProject = () => {
-    window.document.getElementById('blackHole').classList.remove('fullBlackHole')
+    window.document.getElementById('blackHole').classList.remove('fullBlackHole');
     window.document.getElementById('project1').classList.remove('showProject');
 }
 window.openAbout = () => {
