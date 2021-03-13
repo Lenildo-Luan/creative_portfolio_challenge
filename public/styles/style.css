@@ -367,3 +367,17 @@ body {
         margin-bottom: 25px;
     }
 }
+
+#audioOn {
+    position: absolute;
+    display: flex;
+    top: 2.5vh;
+    left: 2.5vw;
+    opacity: 0.4;
+}
+
+#audioOn>img {
+    width: 15px;
+    height: auto;
+    margin-right: 7.5px;
+}
