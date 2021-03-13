@@ -15,6 +15,11 @@ interact('.dropzone').dropzone({
         var dropzoneElement = event.target
         audio1.isInProjectArea = 1;
 
+
+        let template = document.getElementById('project-template').innerHTML;
+        // console.log(projectTemplate);
+        document.getElementById('project1').innerHTML = Mustache.render(template, projects[draggableElement.id]);
+
         // feedback the possibility of a drop
         dropzoneElement.classList.add('drop-target')
         draggableElement.classList.add('can-drop')
@@ -61,6 +66,53 @@ function dragMoveListener(event) {
     target.setAttribute('data-y', y)
 }
 
+var projects = {
+    planet1: {
+        img: './assets/images/becoDaEletronica.png',
+        title: 'O beco',
+        subtitle: 'Não o diagonal, mas sim o da eletrônica',
+        text1: 'Desde o ensino médio técnico, comprar componentes eletrônicos era complicado. Tinhamos que nos deslocar até o centro da cidade, onde tinham lojas com esses produtos, na esperança de encontra-los. Mesmo assim, as opções eram bem limitadas, nos restando duas opções. Comprar caro aqui pelo Brasil, ou',
+        text2: 'importar e esperar um bom tempo para receber nosso material. No ensino superior esse problema se repetiu. Então eu mais dois amigos decidimos montar nossa própria loja de eletrônicos, para oferecer a estudantes como nós, componentes eletrônicos por um preço acessivel e sem ter que esperar meses por isso.',
+        link: 'https://www.instagram.com/becodaeletronica/',
+        linkImg: './assets/images/instagram_white.svg'
+    },
+    planet2: {
+        img: './assets/images/RAS.png',
+        title: 'RAS',
+        subtitle: 'Sociedade e Robótica e Automação do IEEE (RAS)',
+        text1: 'O Instituto de Engenheiros Elétricos e Eletricistas (IEEE) é uma instituição a nível global. Porém, se existir um grupo de estudantes engajados dentro de alguma universdade, estes podem abrir uma ramificação dessa instituição nela. A RAS é um capítulo dessa instituição, voltada a robótica e automação.',
+        text2: 'Eu e uns amigos abrimos esse capítulo em nossa universidade. Começando como um grupo voltado ao ensino robótica para os novatos da graduação, crescemos e nos tornamos um dos maiores capítulos do Brasil, contando hoje com diversas atividades internas, externas e uma comunidade forte e ativa.',
+        link: 'https://www.instagram.com/rasufpb/',
+        linkImg: './assets/images/instagram_white.svg'
+    },
+    planet3: {
+        img: './assets/images/JornadaWeb.png',
+        title: 'Jornada Web',
+        subtitle: 'Compartilhar conhecimento é preciso',
+        text1: 'Acredito que conhecimento é algo que deve ser compartilhado com o máximo de pessoas possível. Compartilhar conhecimento é algo vital para crescermos enquanto sociedade. Além disso, quando eu ensino, sinto que aprendo duas vezes. Com esse pensamento eu iniciei um projeto pessoal',
+        text2: 'chamado #jornadaweb. Durante alguns meses revisei e estudei os fundamentos do desenvolvimento web, e comecei a compartilhar parte do que aprendia nas redes sociais. Nesse momento estou planejando dar um próximo passo e convidar outras pessoas a fazerem parte disso comigo.',
+        link: 'https://www.instagram.com/lenildoluan/',
+        linkImg: './assets/images/instagram_white.svg'
+    },
+    planet4: {
+        img: './assets/images/Bravadus.png',
+        title: 'Bravadus',
+        subtitle: 'Nós adoramos desafios',
+        text1: 'Sou fascinado por tudo que envolve computação, desde a hardware a desenvolvimento de software. Aprender a criar projetos com minhas próprias mãos me dá a impressão de que posso moldar a realidade da forma como desejo. Porém, esse poder pode conter cosnsigo algumas responsabilidades no mundo.',
+        text2: 'Existêm muitas pessoas e empresas ao redor desse Brasil e até do mundo que necessitam de pessoas como eu para resolver problemas. Assim nasceu a Bravadus, onde eu e mais alguns amigos nos tornamos disponíveis para ajudar quem precisa, e tornar o mundo um lugar melhor, um projeto por vez.',
+        link: 'https://www.instagram.com/bravadusagency/',
+        linkImg: './assets/images/instagram_white.svg'
+    },
+    planet5: {
+        img: './assets/images/Optlife.png',
+        title: 'Optlife',
+        subtitle: 'Quer saber qual a rotina da sua melhor versão?',
+        text1: 'Já teve a sensação de que não teve tempo? De que administrar seu tempo tem se tornado algo cansativo? Não consegue separar hora de trabalho da hora para sua vida pessoal? Se sim, eu também, e estou cansado disso. Por isso, tenho feito desse problema foco da minha pesquisa em um laboratório ',
+        text2: 'referência em criação de algorítimos para resolver problemas da vida real, como esse. Mas decidi dar um próximo passo, e em conjunto com outros pesquisadores/desenvolvedores, estamos criando algo que qualquer pessoa possa usar para encontrar a rotina da sua melhor versão, e vive-la.',
+        link: 'https://me8z666e0w5.typeform.com/to/xPAKT5X7?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&utm_term=xxxxx&utm_content=xxxxx',
+        linkImg: './assets/images/form.svg'
+    }
+}
 
 var audio1 = {
     isDragged: 0,
@@ -82,11 +134,11 @@ var audio1 = {
     },
 };
 
+audio1.setCurrentTime(2, 0);
+
 particlesJS.load('particles-js', 'particles.json', function() {
     console.log('callback - particles.js config loaded');
 });
-
-audio1.setCurrentTime(2, 0);
 
 window.audio1 = audio1;
 window.closeProject = () => {

@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 5vh;
     overflow: hidden;
 }
 
@@ -30,17 +30,29 @@ body {
 
 /* Planets */
 
-.planet1 {
-    background-color: #29e;
+#planet1 {
+    background-color: #00B7FF;
 }
 
-.planet2 {
-    background-color: #4e4;
+#planet2 {
+    background-color: #D1E6EC;
+}
+
+#planet3 {
+    background-color: #fe6e00;
+}
+
+#planet4 {
+    background-color: #14F4DA;
+}
+
+#planet5 {
+    background-color: #AF72F4;
 }
 
 .drag-drop {
     z-index: 2;
-    display: inline-block;
+    display: flex;
     height: 75px;
     width: 75px;
     border-radius: 50%;
@@ -49,7 +61,19 @@ body {
     -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     transition: background-color 0.3s;
-    margin-bottom: 5vh;
+    margin-bottom: 2.75vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.drag-drop:hover>.planetText {
+    opacity: 1;
+}
+
+.planetText {
+    opacity: 0;
+    transition: 0.3s;
+    color: #000;
 }
 
 .drag-drop.can-drop {
@@ -67,6 +91,13 @@ body {
     width: 200px;
     height: 200px;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#blackHole .subtitle {
+    opacity: 0.4;
 }
 
 .dropzone {
@@ -130,7 +161,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 600px;
-    height: 350px;
+    height: 375px;
 }
 
 .paragraph {
@@ -240,12 +271,17 @@ body {
 
 #sum {
     position: absolute;
-    bottom: -150%;
-    width: 81vw;
-    height: 81vw;
+    top: 87%;
+    width: 100vw;
+    height: 100vw;
+    right: 0;
     border-radius: 50%;
-    background-color: #fe6e00;
+    background-color: #ffea00;
     transition: 0.3s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 2vh;
 }
 
 #sum:hover {
@@ -257,12 +293,18 @@ body {
     opacity: 1;
 }
 
+#about :is(.title, .subtitle, .text) {
+    color: #000;
+}
+
+#about .text {
+    font-weight: 400;
+}
+
 .aboutTitle {
-    position: absolute;
-    left: 40%;
-    top: 2.5%;
     opacity: 0;
     transition: 0.2s;
+    z-index: 5;
 }
 
 #about {
@@ -277,4 +319,10 @@ body {
     cursor: inherit !important;
     transform: scale(2.5, 2.5) !important;
     z-index: 3 !important;
+}
+
+.icon {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
 }
