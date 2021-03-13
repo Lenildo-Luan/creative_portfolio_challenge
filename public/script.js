@@ -177,12 +177,17 @@ planet5Audio.addEventListener('mouseenter', () => {
         audioLibrarie.planet5.play();
 })
 
-let universe = document.getElementById("universe");
-universe.addEventListener('mousemove', () => {
-    audioLibrarie.universe.volume = 0.05;
-    if (audio1.isDragged == 0)
-        audioLibrarie.universe.play();
-})
+// let universe = document.getElementById("universe");
+// universe.addEventListener('mousemove', () => {
+//     audioLibrarie.universe.volume = 0.05;
+//     audioLibrarie.universe.play();
+// })
+
+var sound = new Howl({
+    src: ['./assets/audio/universe.mp3'],
+    loop: true,
+    volume: 0.05
+});
 
 setTimeout(() => {
     window.document.getElementById('loading').classList.remove('showProject');
@@ -190,6 +195,8 @@ setTimeout(() => {
     // window.focus()
     // audioLibrarie.universe.volume = 0.02;
     // audioLibrarie.universe.play();
+
+    sound.play();
 }, 1000)
 
 // ===========================================================================
