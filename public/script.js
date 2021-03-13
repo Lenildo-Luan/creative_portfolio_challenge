@@ -186,15 +186,12 @@ planet5Audio.addEventListener('mouseenter', () => {
 var sound = new Howl({
     src: ['./assets/audio/universe.mp3'],
     loop: true,
-    volume: 0.05
+    volume: 0.1
 });
 
 setTimeout(() => {
     window.document.getElementById('loading').classList.remove('showProject');
     window.document.getElementById('sum').classList.remove('fullSum');
-    // window.focus()
-    // audioLibrarie.universe.volume = 0.02;
-    // audioLibrarie.universe.play();
 
     sound.play();
 }, 1000)
