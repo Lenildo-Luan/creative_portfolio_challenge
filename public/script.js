@@ -147,9 +147,6 @@ var audioLibrarie = {
     planet5: document.getElementById("planet5Hover")
 }
 
-audioLibrarie.universe.volume = 0.02;
-audioLibrarie.universe.play();
-
 let planet1Audio = document.getElementById("planet1");
 planet1Audio.addEventListener('mouseenter', () => {
     if (audio1.isDragged == 0)
@@ -180,9 +177,19 @@ planet5Audio.addEventListener('mouseenter', () => {
         audioLibrarie.planet5.play();
 })
 
+let universe = document.getElementById("universe");
+universe.addEventListener('mousemove', () => {
+    audioLibrarie.universe.volume = 0.05;
+    if (audio1.isDragged == 0)
+        audioLibrarie.universe.play();
+})
+
 setTimeout(() => {
     window.document.getElementById('loading').classList.remove('showProject');
-    window.document.getElementById('sum').classList.remove('fullSum')
+    window.document.getElementById('sum').classList.remove('fullSum');
+    // window.focus()
+    // audioLibrarie.universe.volume = 0.02;
+    // audioLibrarie.universe.play();
 }, 1000)
 
 // ===========================================================================
