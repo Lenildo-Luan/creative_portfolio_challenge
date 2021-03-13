@@ -6,7 +6,7 @@ A ideia desse portfólio não é mostrar mais um conjunto de projetos que fiz, e
 
 ## Como rodar esse projeto?
 
-Praticamente tudo aqui foi feito "na mão". Então não é necessário nada para rodar, pois só existem códigos HTML, CSS e Javascript aqui. Portanto, você pode arrastar o `index.html` que está dentro da pasta `SRC` para o navegador, rodar utilizando a extensão `liveserver` do VSCode ou acessar esse link da [vercel](https://creative-portfolio-challenge-og6k7g5as-lenildo-luan.vercel.app/).
+Praticamente tudo aqui foi feito "na mão". Então não é necessário nada para rodar, pois só existem códigos HTML, CSS e Javascript aqui. Portanto, você pode arrastar o `index.html` que está dentro da pasta `SRC` para o navegador, rodar utilizando a extensão `liveserver` do VSCode ou acessar esse link da [vercel](https://creative-portfolio-challenge-jlbu4spvc-lenildo-luan.vercel.app/).
 
 ## Obrigado
 
