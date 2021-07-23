@@ -1,4 +1,4 @@
-# Portfólio criativo
+# Portfólio criativo feito para a competição da comunidade da Rafa Ballerini da qual ganhou menção honrosa da AtekitaDev
 
 Nesse portfólio tentei fazer o projeto mais simples e mais criativo que consegui. Usei elementos de algo que gosto muito, o universo, para montar um portfólio 2D temático.
 
